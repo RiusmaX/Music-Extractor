@@ -37,8 +37,8 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     private Task task;
 
     public ApplicationLayout(){
-        directoryTextField.setText(homeDirectory);
-        youtubeURLField.setText("https://www.youtube.com/watch?v=2F6d6crjRyU");
+        directoryTextField.setText(homeDirectory+"\\Music\\RapFR");
+        youtubeURLField.setText("https://www.youtube.com/playlist?list=PLtlm_wMtiTqKqoDzN2aj-JxeHzhABDegW");
 
 
 
@@ -158,8 +158,5 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     public void updateProgressBar(int percentage){
         progressBar1.setValue(percentage);
     }
-    public void updateEventList(String myEvent) {
-        // Log into listbox
-        model.addElement(myEvent);
-    }
+    public void updateEventList(String myEvent) { model.addElement(myEvent); }
 }

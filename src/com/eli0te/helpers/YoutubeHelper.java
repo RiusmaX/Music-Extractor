@@ -21,7 +21,7 @@ public class YoutubeHelper implements HelperInterface {
 
     public YoutubeHelper() {
         // Uses of the right library depending on OS
-        if ( isWindowsOS() ) {
+        if (isWindowsOS()) {
             cmd = System.getProperty("user.dir") + "\\lib\\youtube-dl.exe";
         } else {
             cmd = System.getProperty("user.dir") + "/lib/youtube-dl";
@@ -29,9 +29,10 @@ public class YoutubeHelper implements HelperInterface {
     }
 
     @Override
-    public void getVideo(String videoURL, String outputPath, ApplicationLayout al) throws Exception { }
+    public void getVideo(String videoURL, String outputPath, ApplicationLayout al) throws Exception {
+    }
 
-    private ArrayList<String> getinformations(String url) throws Exception{
+    private ArrayList<String> getinformations(String url) throws Exception {
 
         ArrayList<String> infosReturn = new ArrayList<String>();
         Process[] p = new Process[1];
@@ -40,11 +41,11 @@ public class YoutubeHelper implements HelperInterface {
 
         InputStreamReader is = new InputStreamReader(p[0].getInputStream());
 
-        BufferedReader in = new BufferedReader( is );
+        BufferedReader in = new BufferedReader(is);
         String cmdOutput;
 
         //Chaque ligne retourné est égale aux infos d'une ou plusieurs vidéos (si playlist)
-        while ( (cmdOutput = in.readLine() ) != null ) {
+        while ((cmdOutput = in.readLine()) != null) {
             // Traiter cmdOutput (Json)
             //in.
             JSONObject line = new JSONObject(cmdOutput);
@@ -54,7 +55,6 @@ public class YoutubeHelper implements HelperInterface {
             infosReturn.add("Descpription de la vidéo : ");
             infosReturn.add(line.getString("description") + "\n");
             String videoImg = line.getString("thumbnail");
-
 
 
             // ...
@@ -69,97 +69,71 @@ public class YoutubeHelper implements HelperInterface {
 
         p[0] = new ProcessBuilder(cmd, "--get-filename", videoURL).start();
 
-        BufferedReader in = new BufferedReader( new InputStreamReader(p[0].getInputStream()) );
+        BufferedReader in;//new BufferedReader( new InputStreamReader(p[0].getInputStream()) );
 
         ArrayList<String> infos = new ArrayList<String>(getinformations(videoURL));
 
-        for (String s: infos){
+        for (String s : infos) {
             al.updateEventList(s);
         }
 
         // Dynamic construction of the outputPath depending on operating system
         cmd2 = outputPath;
-        if ( isWindowsOS() ){
+        if (isWindowsOS()) {
             cmd2 += "\\";
         } else {
             cmd2 += "/";
         }
-        cmd2 += "%(title)s.mp3";
+        cmd2 += "%(title)s.%(ext)s";
 
         p[1] = new ProcessBuilder(cmd,
+                "-v",                   // => Afficher l'output complet de youtube-dl
                 videoURL,
-                "-x",
+                "-x",                   // => = --extract-audio
                 "--audio-format",
-                "mp3",
+                "\"mp3\"",              // => Pris en compte de manière aléatoire (guillemets ou non)
                 "--audio-quality",
-                "0",
+                "0",                    // => Qualité à évaluer
+                // "--embed-thumbnail",    // => Attribuer l'image de la vidéo au fichier audio
+//                "--prefer-avconv",      // => A tester si meilleur que ffmpeg ou pas (plus récent)
+                // "--prefer-ffmpeg",
+                "--ignore-errors",      // => En cas de vidéo supprimée dans une playlist
                 "-o",
                 cmd2
         ).start();
 
 
-
         //youtube-dl.exe https://www.youtube.com/watch?v=2F6d6crjRyU -x --audio-format "mp3" --audio-quality 0 -o C:\Users\Marius\Music\Youtube\%(title)s.%(ext)s
 
 
-
-
-        in = new BufferedReader( new InputStreamReader(p[1].getInputStream()) );
+        in = new BufferedReader(new InputStreamReader(p[1].getInputStream()));
         String cmdOutput;
         String s;
 
-        //Il ne faut pas utiliser contains car parfois  ( " xxx xxxxxx  xxxxxx   xxxx ".contains("  ") retourne la fin ...  )
-        while ( (cmdOutput = in.readLine()) != null ) {
+        while ((cmdOutput = in.readLine()) != null) {
 
             System.out.println(cmdOutput);
-            if ( cmdOutput.contains("[download] ") && cmdOutput.contains("%")  ) {
+            if (cmdOutput.contains("[download] ") && cmdOutput.contains("%")) {
                 s = cmdOutput.substring("[download] ".length(), cmdOutput.indexOf('%'));
                 System.out.println(Float.parseFloat(s));
-                if ( s.contains(".") ) // Exclusion du dernier 100% déjà en double
+                if (s.contains("."))
                     al.updateProgressBar(Math.round(Float.parseFloat(s)));
-                    //al.progress = Math.round(Float.parseFloat(s));
 
-            } // J'ai l'impression qu'il retourne pas les truc de ffmpeg
-            //ouais je pense qu'il l'xécute pas
-
-
-            /*
-
-            if(cmdOutput.contains("%")){
-             if(cmdOutput.contains("   ") && cmdOutput.contains("%") && !cmdOutput.contains("in")){ // Pk in ??
-                 sTab = cmdOutput.split("   ");
-                 String[] s = sTab[1].split("%");
-                 System.out.println(s[0]);
-                 al.progress =  Math.round(Float.parseFloat(s[0]));
-             } else if(cmdOutput.contains("  ") && cmdOutput.contains("%") && !cmdOutput.contains("in")) {
-                 sTab = cmdOutput.split("  ");
-                 String[] s = sTab[1].split("%");
-                 System.out.println(s[0]);
-                 al.progress =  Math.round(Float.parseFloat(s[0]));
-             }
-            }else
-                System.out.println(cmdOutput);
-            // j'vais manger man laisse des comments si tu change des trucs ^^  ok cimer zoubis !
-            //.updateEventList(cmdOutput);
-            */
+            }
         }
         in.close();
     }
 
-    private static String RemoveIllegalPathCharacters(String path)
-    {
+    private static String RemoveIllegalPathCharacters(String path) {
         return path.replaceAll("[^a-zA-Z0-9.-]", "_");
     }
 
-    private static String RemoveIllegalPathCharactersForRename(String path)
-    {
-        return path.replaceAll("[^a-zA-Z0-9.-]", " "); // Comprends pas c'est la même qu'au dessus j'avais fais celle la
-        //pour le renomage de fichier // tu preans une classends le fichier à la fain et tu le rename ? Car c'est youtube=dl qui nome lesfichiers
-        // bah ouais c'est dégeulasse sinon attebdje vais rajouter des trucs d
+    private static String RemoveIllegalPathCharactersForRename(String path) {
+        return path.replaceAll("[^a-zA-Z0-9.-]", " ");
     }
 
-    private static boolean isWindowsOS(){
-        if ( OS.indexOf("win") >= 0 )
+    private static boolean isWindowsOS() {
+        if (OS.indexOf("win") >= 0)
             return true;
         return false;
     }
