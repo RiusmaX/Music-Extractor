@@ -26,7 +26,7 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     private JTextField directoryTextField;
     private JButton directoryButton;
     private JList myEventsList;
-    private JPanel SoundcloudPaneContent;
+    private JButton checkLinkButton;
     private JFileChooser chooser;
     private DefaultListModel model;
 
@@ -35,11 +35,18 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     public final ApplicationLayout al = this;
     public int progress = 0;
     private Task task;
+    private YoutubeHelper yh = new YoutubeHelper();
 
     public ApplicationLayout(){
+<<<<<<< HEAD
         directoryTextField.setText(homeDirectory+"\\Music\\RapFR");
         youtubeURLField.setText("https://www.youtube.com/playlist?list=PLtlm_wMtiTqKqoDzN2aj-JxeHzhABDegW");
 
+=======
+        yh = new YoutubeHelper();
+        directoryTextField.setText(homeDirectory);
+        youtubeURLField.setText("https://www.youtube.com/watch?list=PLXEYOK9pTABB84-fyZ2HkarJvJaBoqfUm");
+>>>>>>> origin/master
 
 
         // Log console init
@@ -55,6 +62,10 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
         // download button event
         downloadButton.setActionCommand("download");
         downloadButton.addActionListener(this);
+
+        // check url button event
+        checkLinkButton.setActionCommand("checkLink");
+        checkLinkButton.addActionListener(this);
     }
 
     public static void main(String[] args) {
@@ -106,6 +117,14 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
                     updateEventList("Sélection du dossier de téléchargement : " + chooser.getSelectedFile().getAbsolutePath());
                 }
                 break;
+            case "checkLink":
+                try {
+                    new PlaylistSelectionPopup(yh.getInformation(youtubeURLField.getText()));
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+
+                break;
             default:
                 throw new IllegalArgumentException("Invalid Action Event Command : "+command);
         }
@@ -116,7 +135,6 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
         @Override
         public Void doInBackground() {
             System.out.println("Début du processus");
-            YoutubeHelper yh = new YoutubeHelper();
             setProgress(0);
             try {
                 if(!youtubeURLField.getText().isEmpty() && !directoryTextField.getText().isEmpty())
@@ -150,13 +168,12 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
         }
     }
 
-
-
-    // TODO: Perform update of the console in real time !!! (It seems we need to extends SwingWorker Class)
-    // http://www.coderanch.com/t/499248/GUI/java/setText-updating-promptly
-
     public void updateProgressBar(int percentage){
         progressBar1.setValue(percentage);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     public void updateEventList(String myEvent) { model.addElement(myEvent); }
 }

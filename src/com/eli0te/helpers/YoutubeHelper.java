@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by eLi0tE on 16/01/15.
@@ -32,9 +33,14 @@ public class YoutubeHelper implements HelperInterface {
     public void getVideo(String videoURL, String outputPath, ApplicationLayout al) throws Exception {
     }
 
+<<<<<<< HEAD
     private ArrayList<String> getinformations(String url) throws Exception {
+=======
+    public ArrayList<HashMap<String, String>> getInformation(String url) throws Exception{
 
-        ArrayList<String> infosReturn = new ArrayList<String>();
+
+>>>>>>> origin/master
+
         Process[] p = new Process[1];
 
         p[0] = new ProcessBuilder(cmd, "-j", url).start();
@@ -44,23 +50,38 @@ public class YoutubeHelper implements HelperInterface {
         BufferedReader in = new BufferedReader(is);
         String cmdOutput;
 
+<<<<<<< HEAD
         //Chaque ligne retourné est égale aux infos d'une ou plusieurs vidéos (si playlist)
         while ((cmdOutput = in.readLine()) != null) {
+=======
+        ArrayList<HashMap<String, String>> infoMapList = new ArrayList<>();
+
+
+        int i = 0;
+        HashMap<String, String> infoMap;
+
+        //Chaque ligne retourné est égale aux infos d'une vidéos (si playlist, plusieurs lignes)
+        while ( (cmdOutput = in.readLine() ) != null ) {
+>>>>>>> origin/master
             // Traiter cmdOutput (Json)
             //in.
             JSONObject line = new JSONObject(cmdOutput);
 
-            infosReturn.add("Nom de la vidéo : ");
-            infosReturn.add(line.getString("_filename") + "\n");
-            infosReturn.add("Descpription de la vidéo : ");
-            infosReturn.add(line.getString("description") + "\n");
-            String videoImg = line.getString("thumbnail");
+            infoMap = new HashMap<>();
 
-
+<<<<<<< HEAD
             // ...
 
+=======
+            infoMap.put("title", line.getString("_filename"));
+            infoMap.put("description", line.getString("description"));
+            infoMap.put("thumbnail", line.getString("thumbnail"));
+
+            infoMapList.add(i, infoMap);
+            i++;
+>>>>>>> origin/master
         }
-        return infosReturn;
+        return infoMapList;
     }
 
     @Override
@@ -71,12 +92,23 @@ public class YoutubeHelper implements HelperInterface {
 
         BufferedReader in;//new BufferedReader( new InputStreamReader(p[0].getInputStream()) );
 
-        ArrayList<String> infos = new ArrayList<String>(getinformations(videoURL));
 
+<<<<<<< HEAD
         for (String s : infos) {
             al.updateEventList(s);
         }
+=======
+        // Récupérer le tableau créé avec le bouton checkUrl
 
+    //    ArrayList<HashMap<String,String>> infoMapList = getInformation(videoURL);
+>>>>>>> origin/master
+
+      /*
+        for (HashMap<String, String> hashMap: infoMapList){
+            al.updateEventList("Nom de la vidéo : " + hashMap.get("title"));
+            al.updateEventList("Description : " + hashMap.get("description"));
+        }
+*/
         // Dynamic construction of the outputPath depending on operating system
         cmd2 = outputPath;
         if (isWindowsOS()) {
@@ -106,11 +138,19 @@ public class YoutubeHelper implements HelperInterface {
         //youtube-dl.exe https://www.youtube.com/watch?v=2F6d6crjRyU -x --audio-format "mp3" --audio-quality 0 -o C:\Users\Marius\Music\Youtube\%(title)s.%(ext)s
 
 
+<<<<<<< HEAD
         in = new BufferedReader(new InputStreamReader(p[1].getInputStream()));
         String cmdOutput;
         String s;
 
         while ((cmdOutput = in.readLine()) != null) {
+=======
+        in = new BufferedReader( new InputStreamReader(p[1].getInputStream()) );
+        String cmdOutput;
+        String s;
+
+        while ( (cmdOutput = in.readLine()) != null ) {
+>>>>>>> origin/master
 
             System.out.println(cmdOutput);
             if (cmdOutput.contains("[download] ") && cmdOutput.contains("%")) {
@@ -118,7 +158,10 @@ public class YoutubeHelper implements HelperInterface {
                 System.out.println(Float.parseFloat(s));
                 if (s.contains("."))
                     al.updateProgressBar(Math.round(Float.parseFloat(s)));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
             }
         }
         in.close();

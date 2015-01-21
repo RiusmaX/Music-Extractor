@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java" line="28" mnemonic="5" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java" line="29" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6e8577d-e7df-43b1-a8b9-d4d1442ef9e0" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Marius\Documents\GitHub\Music-Extractor\lib\JID3-0.46.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/music-extractor/com/eli0te/ihm/ApplicationLayout.class" afterPath="$PROJECT_DIR$/out/production/music-extractor/com/eli0te/ihm/ApplicationLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/music-extractor/com/eli0te/helpers/YoutubeHelper.class" afterPath="$PROJECT_DIR$/out/production/music-extractor/com/eli0te/helpers/YoutubeHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/music_extractor_jar/music-extractor.jar" afterPath="$PROJECT_DIR$/out/artifacts/music_extractor_jar/music-extractor.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/eli0te/ihm/ApplicationLayout.java" afterPath="$PROJECT_DIR$/src/com/eli0te/ihm/ApplicationLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java" afterPath="$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="d6e8577d-e7df-43b1-a8b9-d4d1442ef9e0" name="Default" comment="" />
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -80,10 +72,11 @@
       <file leaf-file-name="ApplicationLayout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eli0te/ihm/ApplicationLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2136" max-vertical-offset="2788">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2221" max-vertical-offset="2992">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
               </folding>
             </state>
           </provider>
@@ -99,10 +92,11 @@
       <file leaf-file-name="YoutubeHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5805825" vertical-offset="1265" max-vertical-offset="2346">
-              <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5475728" vertical-offset="1418" max-vertical-offset="2533">
+              <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding>
-                <element signature="e#2263#2271#0" expanded="true" />
+                <element signature="e#4115#4116#0" expanded="true" />
+                <element signature="e#4176#4177#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -453,7 +447,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="978" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -465,7 +459,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36018413" sideWeight="0.72265625" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36018413" sideWeight="0.72265625" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34005377" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19765624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -507,7 +501,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java</url>
-          <line>116</line>
+          <line>121</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -531,7 +525,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2023">
           <caret line="101" column="42" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,6 +545,7 @@
           <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -564,7 +560,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1627" max-vertical-offset="2176">
           <caret line="115" column="61" selection-start-line="115" selection-start-column="61" selection-end-line="115" selection-end-column="61" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,6 +580,7 @@
           <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -592,7 +590,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -611,6 +610,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -620,7 +620,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1326">
           <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -639,6 +640,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -648,7 +650,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1326">
           <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -667,6 +670,7 @@
           <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -676,7 +680,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1377">
           <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -695,6 +700,7 @@
           <caret line="11" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -704,7 +710,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -730,6 +737,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -739,7 +747,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -765,6 +774,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -774,7 +784,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,6 +811,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -809,7 +821,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,6 +846,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -842,7 +856,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,6 +881,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -875,7 +891,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,6 +916,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -914,6 +932,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -943,20 +962,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eli0te/ihm/ApplicationLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2136" max-vertical-offset="2788">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2221" max-vertical-offset="2992">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1421850213101" expanded="true" signature="5116:5174" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eli0te/helpers/YoutubeHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5805825" vertical-offset="1265" max-vertical-offset="2346">
-          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5475728" vertical-offset="1418" max-vertical-offset="2533">
+          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding>
-            <element signature="e#2263#2271#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
           </folding>
         </state>
       </provider>
