@@ -6,18 +6,59 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PlaylistSelectionPopup extends JFrame {
+public class PlaylistSelectionPopup extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
     private JCheckBox checkBoxSelectAll;
-    private JPanel buttonsContainer;
-    private JPanel OkCabcelContainer;
+    private JPanel panelVideoList;
+    private JPanel buttonPane;
 
     public PlaylistSelectionPopup(ArrayList<HashMap<String, String>> videoMapList ) {
-        JFrame frame = new JFrame();
-        JPanel panel = new JPanel();
+
+        super();
+
+        panelVideoList.setLayout(new GridLayout( videoMapList.size(), 1));
+        for (int i = 0; i < videoMapList.size(); i++){
+            panelVideoList.add(new VideoItem(videoMapList.get(i)));
+        }
+
+      //  JScrollPane scrollPane = new JScrollPane(panelVideoList);
+      //  scrollPane.setBounds(0,0,600,450);
+
+//        scrollPane.add(panelVideoList);
+//        scrollPane.setPreferredSize(new Dimension(200, 100));
+//        scrollPane.setBounds(0, 0, 500, 500);
+//        videoContentPane.add(scrollPane, BorderLayout.CENTER);
+//
+
+        setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.VERTICAL;
+        c.gridx = 0;
+        c.gridy = 0;
+        add(panelVideoList, c);
+
+        c.gridx = 0;
+        c.gridy = 1;
+        add(buttonPane, c);
+        pack();
+        setMaximumSize(new Dimension(600, 800));
+        setVisible(true);
+
+        /*
+            TEMP
+                    scrollPane.add(panelVideoList);
+                    panelVideoList.setVisible(true);
+                    scrollPane.setVisible(true);
+                    contentPane.setVisible(true);
+                    add(panelVideoList);
+                    add(contentPane);
+                    pack();
+                    setVisible(true);
+
+         */
 
         //setModal(true);
         // getRootPane().setDefaultButton(buttonOK);
@@ -30,6 +71,9 @@ public class PlaylistSelectionPopup extends JFrame {
         JCheckBox[] videoDl = new JCheckBox[videoMapList.size()];*/
 
         //JPanel mainPane = new JPanel();
+/*
+
+    // Marius Part
 
         panel.setLayout(new GridLayout( videoMapList.size(), 2));
         JScrollPane scrollPane = new JScrollPane(panel);
@@ -46,6 +90,8 @@ public class PlaylistSelectionPopup extends JFrame {
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
+ */
+
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

@@ -5,30 +5,34 @@ import java.awt.*;
 import java.util.HashMap;
 
 /**
- * Created by Marius on 21/01/2015.
+ * Created by eLi0tE on 22/01/15.
  */
-public class VideoItem extends JPanel{
-
-
-    private JTextArea description;
-    private ImagePanel migniature;
+public class VideoItem extends JPanel {
     private JLabel titre;
+    private JCheckBox àTéléchargerCheckBox;
+    private JPanel miniature;
+    private JScrollPane myScroll;
+    private JTextArea description;
+    private String imageURL;
 
-    public VideoItem(HashMap<String, String> infos){
-        super();
-        setSize(new Dimension(150,100));
-        add(description);
-        description.setSize(new Dimension(50,50));
-        migniature = new ImagePanel(infos.get("thumbnail"));
-        add(migniature);
+    public VideoItem(HashMap<String, String> infos) {
+        setLayout(new GridLayout(2,2));
+
+        description = new JTextArea(infos.get("description"));
+
+        miniature = new ImagePanel(infos.get("thumbnail"));
+        titre = new JLabel(infos.get("title"));
+
+
+        myScroll = new JScrollPane(description);
+
         add(titre);
-        titre.setText(infos.get("title"));
-        description.setText(infos.get("description"));
+        add(myScroll);
+        add(miniature);
     }
 
-    private void createUIComponents(){
-        description = new JTextArea();
-        migniature = new ImagePanel("");
-        titre = new JLabel();
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        miniature = new ImagePanel("");
     }
 }

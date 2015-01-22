@@ -24,7 +24,7 @@ public class ImagePanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(image, 80, 80, null); // see javadoc for more info on the parameters
+        g.drawImage(image, 0, 0, 200, 200, null); // see javadoc for more info on the parameters
     }
 
 }
