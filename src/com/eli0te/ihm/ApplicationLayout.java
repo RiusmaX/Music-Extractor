@@ -38,15 +38,9 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     private YoutubeHelper yh = new YoutubeHelper();
 
     public ApplicationLayout(){
-<<<<<<< HEAD
-        directoryTextField.setText(homeDirectory+"\\Music\\RapFR");
-        youtubeURLField.setText("https://www.youtube.com/playlist?list=PLtlm_wMtiTqKqoDzN2aj-JxeHzhABDegW");
-
-=======
         yh = new YoutubeHelper();
         directoryTextField.setText(homeDirectory);
         youtubeURLField.setText("https://www.youtube.com/watch?list=PLXEYOK9pTABB84-fyZ2HkarJvJaBoqfUm");
->>>>>>> origin/master
 
 
         // Log console init
@@ -120,11 +114,10 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
             case "checkLink":
                 try {
                     new PlaylistSelectionPopup(yh.getInformation(youtubeURLField.getText()));
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-
-                break;
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        break;
             default:
                 throw new IllegalArgumentException("Invalid Action Event Command : "+command);
         }
@@ -171,9 +164,6 @@ public class ApplicationLayout extends JFrame implements  ActionListener, Proper
     public void updateProgressBar(int percentage){
         progressBar1.setValue(percentage);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     public void updateEventList(String myEvent) { model.addElement(myEvent); }
 }

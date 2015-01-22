@@ -6,45 +6,45 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PlaylistSelectionPopup extends JDialog {
+public class PlaylistSelectionPopup extends JFrame {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JPanel mainPane;
+
     private JCheckBox checkBoxSelectAll;
+    private JPanel buttonsContainer;
+    private JPanel OkCabcelContainer;
 
     public PlaylistSelectionPopup(ArrayList<HashMap<String, String>> videoMapList ) {
-        setContentPane(contentPane);
-        setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
 
-        JPanel[] videoPanel = new JPanel[videoMapList.size()];
+        //setModal(true);
+        // getRootPane().setDefaultButton(buttonOK);
+
+        /*JPanel[] videoPanel = new JPanel[videoMapList.size()];
         JLabel[] videoTitle = new JLabel[videoMapList.size()];
         ImagePanel[] videoImg = new ImagePanel[videoMapList.size()];
         JTextArea[] videoDesc = new JTextArea[videoMapList.size()];
         JTextField[] videoDuration = new JTextField[videoMapList.size()];
-        JCheckBox[] videoDl = new JCheckBox[videoMapList.size()];
+        JCheckBox[] videoDl = new JCheckBox[videoMapList.size()];*/
 
-        mainPane.setLayout(new GridLayout( videoMapList.size(), 2));
-
+        JPanel mainPane = new JPanel();
+        //mainPane.setLayout(new GridLayout( videoMapList.size(), 2));
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setBounds(0, 0, 500 , 400);
+        contentPane = new JPanel(null);
+        contentPane.setPreferredSize(new Dimension(500, 400));
+        contentPane.add(scrollPane);
         for (int i = 0; i < videoMapList.size(); i++){
-            videoPanel[i] = new JPanel(new GridLayout(3,2));
-            videoTitle[i] = new JLabel(videoMapList.get(i).get("title"));
-            videoImg[i] = new ImagePanel(videoMapList.get(i).get("thumbnail"));
-            videoDesc[i] = new JTextArea(videoMapList.get(i).get("description"));
-            videoDuration[i] = new JTextField(videoMapList.get(i).get("duration"));
-            videoDl[i] = new JCheckBox("À télécharger ? ", true);
-
-            videoPanel[i].add(videoTitle[i]);
-            videoPanel[i].add(videoImg[i]);
-            videoPanel[i].add(videoDesc[i]);
-            videoPanel[i].add(videoDuration[i]);
-            videoPanel[i].add(videoDl[i]);
-
-
-            mainPane.add(videoPanel[i]);
-            videoPanel[i].setVisible(true);
+            panel.add(new VideoItem(videoMapList.get(i)));
         }
+        contentPane.add(buttonsContainer);
+        frame.setContentPane(contentPane);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
