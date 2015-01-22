@@ -1,6 +1,7 @@
 package com.eli0te.ihm;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 
 /**
@@ -15,7 +16,9 @@ public class VideoItem extends JPanel{
 
     public VideoItem(HashMap<String, String> infos){
         super();
+        setSize(new Dimension(150,100));
         add(description);
+        description.setSize(new Dimension(50,50));
         migniature = new ImagePanel(infos.get("thumbnail"));
         add(migniature);
         add(titre);

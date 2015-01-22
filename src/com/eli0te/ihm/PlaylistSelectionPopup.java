@@ -29,11 +29,12 @@ public class PlaylistSelectionPopup extends JFrame {
         JTextField[] videoDuration = new JTextField[videoMapList.size()];
         JCheckBox[] videoDl = new JCheckBox[videoMapList.size()];*/
 
-        JPanel mainPane = new JPanel();
-        //mainPane.setLayout(new GridLayout( videoMapList.size(), 2));
+        //JPanel mainPane = new JPanel();
+
+        panel.setLayout(new GridLayout( videoMapList.size(), 2));
         JScrollPane scrollPane = new JScrollPane(panel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setBounds(0, 0, 500 , 400);
+        scrollPane.setBounds(0, 0, 1000 , 900);
         contentPane = new JPanel(null);
         contentPane.setPreferredSize(new Dimension(500, 400));
         contentPane.add(scrollPane);
